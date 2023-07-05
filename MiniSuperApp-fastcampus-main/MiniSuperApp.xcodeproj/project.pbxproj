@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED89E7692A550827005FC8C8 /* AddPaymentMethodInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E7682A550827005FC8C8 /* AddPaymentMethodInfo.swift */; };
+		ED93F36E2A528FBA00B2DA95 /* AddPaymentMethodRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93F36A2A528FBA00B2DA95 /* AddPaymentMethodRouter.swift */; };
+		ED93F36F2A528FBA00B2DA95 /* AddPaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93F36B2A528FBA00B2DA95 /* AddPaymentMethodViewController.swift */; };
+		ED93F3702A528FBA00B2DA95 /* AddPaymentMethodBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93F36C2A528FBA00B2DA95 /* AddPaymentMethodBuilder.swift */; };
+		ED93F3712A528FBA00B2DA95 /* AddPaymentMethodInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93F36D2A528FBA00B2DA95 /* AddPaymentMethodInteractor.swift */; };
+		ED93F3732A52983300B2DA95 /* AdaptivePresentationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93F3722A52983300B2DA95 /* AdaptivePresentationControllerDelegate.swift */; };
 		EDE564FB2A4E074C00DEE204 /* SuperPayDashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE564F72A4E074C00DEE204 /* SuperPayDashboardRouter.swift */; };
 		EDE564FC2A4E074C00DEE204 /* SuperPayDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE564F82A4E074C00DEE204 /* SuperPayDashboardViewController.swift */; };
 		EDE564FD2A4E074C00DEE204 /* SuperPayDashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE564F92A4E074C00DEE204 /* SuperPayDashboardBuilder.swift */; };
@@ -63,6 +69,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED89E7682A550827005FC8C8 /* AddPaymentMethodInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodInfo.swift; sourceTree = "<group>"; };
+		ED93F36A2A528FBA00B2DA95 /* AddPaymentMethodRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodRouter.swift; sourceTree = "<group>"; };
+		ED93F36B2A528FBA00B2DA95 /* AddPaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodViewController.swift; sourceTree = "<group>"; };
+		ED93F36C2A528FBA00B2DA95 /* AddPaymentMethodBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodBuilder.swift; sourceTree = "<group>"; };
+		ED93F36D2A528FBA00B2DA95 /* AddPaymentMethodInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodInteractor.swift; sourceTree = "<group>"; };
+		ED93F3722A52983300B2DA95 /* AdaptivePresentationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptivePresentationControllerDelegate.swift; sourceTree = "<group>"; };
 		EDE564F72A4E074C00DEE204 /* SuperPayDashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardRouter.swift; sourceTree = "<group>"; };
 		EDE564F82A4E074C00DEE204 /* SuperPayDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardViewController.swift; sourceTree = "<group>"; };
 		EDE564F92A4E074C00DEE204 /* SuperPayDashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardBuilder.swift; sourceTree = "<group>"; };
@@ -131,6 +143,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED93F3692A528F8D00B2DA95 /* AddPaymentMethod */ = {
+			isa = PBXGroup;
+			children = (
+				ED93F36A2A528FBA00B2DA95 /* AddPaymentMethodRouter.swift */,
+				ED93F36B2A528FBA00B2DA95 /* AddPaymentMethodViewController.swift */,
+				ED93F36C2A528FBA00B2DA95 /* AddPaymentMethodBuilder.swift */,
+				ED93F36D2A528FBA00B2DA95 /* AddPaymentMethodInteractor.swift */,
+				ED89E7682A550827005FC8C8 /* AddPaymentMethodInfo.swift */,
+			);
+			path = AddPaymentMethod;
+			sourceTree = "<group>";
+		};
 		EDE564F62A4E071200DEE204 /* SupperPayDashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				EDE565182A50197600DEE204 /* Repository */,
+				ED93F3692A528F8D00B2DA95 /* AddPaymentMethod */,
 				EDE565062A5008EA00DEE204 /* CardOnFileDashboard */,
 				EDE564F62A4E071200DEE204 /* SupperPayDashboard */,
 				F57F6AE426DB4A2700C0117D /* FinanceHomeRouter.swift */,
@@ -224,6 +249,7 @@
 				F5EAA21F270B39DC00EF2B70 /* PushModalPresentationController.swift */,
 				F5EAA22F270B3A7100EF2B70 /* RIBs+Utils.swift */,
 				EDE565012A4FFF9C00DEE204 /* Combine+Utils.swift */,
+				ED93F3722A52983300B2DA95 /* AdaptivePresentationControllerDelegate.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -395,6 +421,7 @@
 				F5EAA232270B3A8F00EF2B70 /* UIView+Utils.swift in Sources */,
 				F57F6AEA26DB4A2700C0117D /* FinanceHomeBuilder.swift in Sources */,
 				F5EAA22E270B3A4500EF2B70 /* SuperPayView.swift in Sources */,
+				ED93F3732A52983300B2DA95 /* AdaptivePresentationControllerDelegate.swift in Sources */,
 				F5EAA220270B39DC00EF2B70 /* PushModalPresentationController.swift in Sources */,
 				EDE565122A500AC800DEE204 /* AddPaymentMethodButton.swift in Sources */,
 				F57F6AF126DB4A2D00C0117D /* ProfileHomeViewController.swift in Sources */,
@@ -406,6 +433,8 @@
 				F5EAA22B270B3A4500EF2B70 /* TransportHomeBuilder.swift in Sources */,
 				F5EAA21D270B395900EF2B70 /* HomeWidgetModel.swift in Sources */,
 				F5EAA21E270B395900EF2B70 /* AppHomeRouter.swift in Sources */,
+				ED89E7692A550827005FC8C8 /* AddPaymentMethodInfo.swift in Sources */,
+				ED93F36F2A528FBA00B2DA95 /* AddPaymentMethodViewController.swift in Sources */,
 				EDE565022A4FFF9C00DEE204 /* Combine+Utils.swift in Sources */,
 				F5EAA21A270B395900EF2B70 /* AppHomeBuilder.swift in Sources */,
 				F5EAA234270B3A9A00EF2B70 /* UIColor+Utils.swift in Sources */,
@@ -419,6 +448,7 @@
 				F57F6AFE26DB4CD700C0117D /* RootTabBarController.swift in Sources */,
 				EDE564FD2A4E074C00DEE204 /* SuperPayDashboardBuilder.swift in Sources */,
 				F57F6AEB26DB4A2700C0117D /* FinanceHomeInteractor.swift in Sources */,
+				ED93F36E2A528FBA00B2DA95 /* AddPaymentMethodRouter.swift in Sources */,
 				EDE5650E2A500A9E00DEE204 /* CardOnFileDashboardInteractor.swift in Sources */,
 				F5EAA21B270B395900EF2B70 /* AppHomeInteractor.swift in Sources */,
 				F57F6AE826DB4A2700C0117D /* FinanceHomeRouter.swift in Sources */,
@@ -426,6 +456,8 @@
 				F57F6AE926DB4A2700C0117D /* FinanceHomeViewController.swift in Sources */,
 				F5829F5926DB2BC400BFA8CD /* AppDelegate.swift in Sources */,
 				EDE565132A500AC800DEE204 /* PaymentMehodView.swift in Sources */,
+				ED93F3712A528FBA00B2DA95 /* AddPaymentMethodInteractor.swift in Sources */,
+				ED93F3702A528FBA00B2DA95 /* AddPaymentMethodBuilder.swift in Sources */,
 				F5EAA21C270B395900EF2B70 /* AppHomeViewController.swift in Sources */,
 				EDE564FB2A4E074C00DEE204 /* SuperPayDashboardRouter.swift in Sources */,
 				F5EAA236270B3AA600EF2B70 /* UIColor+Super.swift in Sources */,

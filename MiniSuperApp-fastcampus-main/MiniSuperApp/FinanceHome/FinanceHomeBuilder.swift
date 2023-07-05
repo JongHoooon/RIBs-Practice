@@ -7,12 +7,13 @@ protocol FinanceHomeDependency: Dependency {
 
 final class FinanceHomeComponent: Component<FinanceHomeDependency>,
                                   SuperPayDashboardDependency,
-                                  CardOnFileDashboardDependency {
+                                  CardOnFileDashboardDependency,
+                                  AddPaymentMethodDependency {
     
   var balance: ReadOnlyCurrentValuePublisher<Double> { balancePublisher }  // 잔액 읽기 전용
   private let balancePublisher: CurrentValuePublisher<Double> // 잔액 업데이트시 사용
   
-  var cardsOnFileRepository: CardOnFileRepository
+  var cardOnFileRepository: CardOnFileRepository
   
   init(
     dependency: FinanceHomeDependency,
@@ -20,7 +21,7 @@ final class FinanceHomeComponent: Component<FinanceHomeDependency>,
     cardOnFileRepository: CardOnFileRepository
   ) {
     self.balancePublisher = balance
-    self.cardsOnFileRepository = cardOnFileRepository
+    self.cardOnFileRepository = cardOnFileRepository
     super.init(dependency: dependency)
   }
 }
@@ -52,12 +53,14 @@ final class FinanceHomeBuilder: Builder<FinanceHomeDependency>, FinanceHomeBuild
     
     let superPayDashboardBuilder = SuperPayDashboardBuilder(dependency: component)
     let cardOnFileDashboardBuilder = CardOnFileDashboardBuilder(dependency: component)
+    let addPaymentMethodBuildable = AddPaymentMethodBuilder(dependency: component)
     
     return FinanceHomeRouter(
       interactor: interactor,
       viewController: viewController,
       superPayDashboardBuildable: superPayDashboardBuilder,
-      cardOnFileDashboardBuildable: cardOnFileDashboardBuilder
+      cardOnFileDashboardBuildable: cardOnFileDashboardBuilder,
+      addPaymentMethodBuildable: addPaymentMethodBuildable
     )
   }
 }
