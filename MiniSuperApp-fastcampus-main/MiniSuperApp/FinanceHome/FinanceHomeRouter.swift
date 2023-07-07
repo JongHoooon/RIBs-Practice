@@ -3,7 +3,9 @@ import ModernRIBs
 protocol FinanceHomeInteractable: Interactable,
                                   SuperPayDashboardListener,
                                   CardOnFileDashboardListener,
-                                  AddPaymentMethodListener {
+                                  AddPaymentMethodListener,
+                                  TopupListener {
+  
   var router: FinanceHomeRouting? { get set }
   var listener: FinanceHomeListener? { get set }
   var presentationDelegateProxy: AdaptivePresentaionControllerDelegateProxy { get }
@@ -25,17 +27,22 @@ final class FinanceHomeRouter: ViewableRouter<FinanceHomeInteractable, FinanceHo
   private let addPaymentMethodBuildable: AddPaymentMethodBuildable
   private var addPaymnetMethodRouting: Routing?
   
+  private let topupBuildable: TopupBuildable
+  private var topupRouting: Routing?
+  
   // TODO: Constructor inject child builder protocols to allow building children.
   init(
     interactor: FinanceHomeInteractable,
     viewController: FinanceHomeViewControllable,
     superPayDashboardBuildable: SuperPayDashboardBuildable,
     cardOnFileDashboardBuildable: CardOnFileDashboardBuildable,
-    addPaymentMethodBuildable: AddPaymentMethodBuildable
+    addPaymentMethodBuildable: AddPaymentMethodBuildable,
+    topupBuildable: TopupBuildable
   ) {
     self.superPayDashboardBuildable = superPayDashboardBuildable
     self.cardOnFileDashboardBuildable = cardOnFileDashboardBuildable
     self.addPaymentMethodBuildable = addPaymentMethodBuildable
+    self.topupBuildable = topupBuildable
     super.init(
       interactor: interactor,
       viewController: viewController
@@ -85,5 +92,24 @@ final class FinanceHomeRouter: ViewableRouter<FinanceHomeInteractable, FinanceHo
     viewControllable.dismiss(completion: nil)
     detachChild(router)
     addPaymnetMethodRouting = nil
+  }
+  
+  func attachTopup() {
+    guard topupRouting == nil else { return }
+    
+    let router = topupBuildable.build(withListener: interactor)
+    
+    // topup은 viewless riblet 이라 router.viewControllable 존재하지 않는다.
+    // viewless riblet은 present 하지 않고 attachChild만 한다.
+    attachChild(router)
+    topupRouting = router
+  }
+  
+  func detachTopup() {
+    guard let router = topupRouting else { return }
+    
+    // viewless riblet은 dismiss 하지않고 detachChild만 한다.
+    detachChild(router)
+    topupRouting = nil
   }
 }

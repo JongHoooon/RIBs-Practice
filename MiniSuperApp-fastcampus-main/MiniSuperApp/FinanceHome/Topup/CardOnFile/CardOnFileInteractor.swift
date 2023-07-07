@@ -8,37 +8,60 @@
 import ModernRIBs
 
 protocol CardOnFileRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+  // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
 protocol CardOnFilePresentable: Presentable {
-    var listener: CardOnFilePresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
+  var listener: CardOnFilePresentableListener? { get set }
+  
+  func update(with viewModels: [PaymentMethodViewModel])
 }
 
 protocol CardOnFileListener: AnyObject {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+  func cardOnFileDidTapClose()
+  func cardOnFileDidTapAddCard()
+  func CardOnFileDidSelect(at index: Int)
 }
 
-final class CardOnFileInteractor: PresentableInteractor<CardOnFilePresentable>, CardOnFileInteractable, CardOnFilePresentableListener {
-
-    weak var router: CardOnFileRouting?
-    weak var listener: CardOnFileListener?
-
-    // TODO: Add additional dependencies to constructor. Do not perform any logic
-    // in constructor.
-    override init(presenter: CardOnFilePresentable) {
-        super.init(presenter: presenter)
-        presenter.listener = self
+final class CardOnFileInteractor: PresentableInteractor<CardOnFilePresentable>,
+                                  CardOnFileInteractable,
+                                  CardOnFilePresentableListener {
+  
+  weak var router: CardOnFileRouting?
+  weak var listener: CardOnFileListener?
+  
+  private let paymentMethods: [PaymentMethod]
+  
+  init(
+    presenter: CardOnFilePresentable,
+    paymentMethods: [PaymentMethod]
+  ) {
+    self.paymentMethods = paymentMethods
+    super.init(presenter: presenter)
+    presenter.listener = self
+  }
+  
+  override func didBecomeActive() {
+    super.didBecomeActive()
+    
+    presenter.update(with: paymentMethods.map(PaymentMethodViewModel.init))
+  }
+  
+  override func willResignActive() {
+    super.willResignActive()
+    // TODO: Pause any business logic.
+  }
+  
+  func didTapClose() {
+    listener?.cardOnFileDidTapClose()
+  }
+  
+  func didSelectItem(at: Int) {
+    if at >= paymentMethods.count {
+      listener?.cardOnFileDidTapAddCard()
+    } else {
+      listener?.CardOnFileDidSelect(at: at)
     }
+  }
 
-    override func didBecomeActive() {
-        super.didBecomeActive()
-        // TODO: Implement business logic here.
-    }
-
-    override func willResignActive() {
-        super.willResignActive()
-        // TODO: Pause any business logic.
-    }
 }

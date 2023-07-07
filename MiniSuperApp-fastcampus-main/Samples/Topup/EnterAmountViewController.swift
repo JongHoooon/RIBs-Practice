@@ -7,7 +7,9 @@ protocol EnterAmountPresentableListener: AnyObject {
   func didTapTopup(with amount: Double)
 }
 
-final class EnterAmountViewController: UIViewController, EnterAmountPresentable, EnterAmountViewControllable {
+final class EnterAmountViewController: UIViewController,
+                                       EnterAmountPresentable,
+                                       EnterAmountViewControllable {
   
   weak var listener: EnterAmountPresentableListener?
   
