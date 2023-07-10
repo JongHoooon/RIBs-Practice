@@ -17,6 +17,16 @@ protocol EnterAmountPresentableListener: AnyObject {
 final class EnterAmountViewController: UIViewController,
                                        EnterAmountPresentable,
                                        EnterAmountViewControllable {
+  func startLoading() {
+    activityIndicator.startAnimating()
+    ctaButton.isEnabled = false
+  }
+  
+  func stopLoading() {
+    activityIndicator.stopAnimating()
+    ctaButton.isEnabled = true
+  }
+  
   func updateSelectedPaymentMethod(with viewModel: SelectedPaymentMethodViewModel) {
     selectedPaymentMethodView.update(with: viewModel)
   }

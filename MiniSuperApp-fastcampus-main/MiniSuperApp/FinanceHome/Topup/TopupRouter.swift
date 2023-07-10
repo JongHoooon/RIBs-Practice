@@ -69,20 +69,29 @@ final class TopupRouter: Router<TopupInteractable>, TopupRouting {
     }
   }
   
-  func attachAddPaymentMethod() {
+  func attachAddPaymentMethod(closeButtonType: DismissButtonType) {
     guard addPaymentRouting == nil else { return }
 
-    let router = addPaymentMethodBuildable.build(withListener: interactor)
-    presentInsideNavigation(router.viewControllable)
+    let router = addPaymentMethodBuildable.build(
+      withListener: interactor,
+      closeButtonType: closeButtonType
+    )
+    
+    if let navigationControllerable = navigationControllerable {
+      navigationControllerable.pushViewController(router.viewControllable, animated: true)
+    } else {
+      presentInsideNavigation(router.viewControllable)
+    }
+      
     attachChild(router)
     addPaymentRouting = router
-    
   }
   
   func detachAddPaymentMethod() {
     guard let router = addPaymentRouting else { return }
     
-    dismissPresentedNavigation(completion: nil)
+//    dismissPresentedNavigation(completion: nil)
+    navigationControllerable?.popViewController(animated: true)
     detachChild(router)
     addPaymentRouting = nil
   }
@@ -91,7 +100,13 @@ final class TopupRouter: Router<TopupInteractable>, TopupRouting {
     guard enterAmountRouting == nil else { return }
     
     let router = enterAmountBuildable.build(withListener: interactor)
-    presentInsideNavigation(router.viewControllable)
+    
+    if let navigation = navigationControllerable {
+      navigation.setViewControllers([router.viewControllable])
+      resetChildRouting()
+    } else {
+      presentInsideNavigation(router.viewControllable)
+    }
     attachChild(router)
     enterAmountRouting = router
   }
@@ -124,6 +139,11 @@ final class TopupRouter: Router<TopupInteractable>, TopupRouting {
     cardOnFileRouting = nil
   }
   
+  func popToRoot() {
+    navigationControllerable?.popToRoot(animated: true)
+    resetChildRouting()
+  }
+  
   // MARK: - Private
   
   private func presentInsideNavigation(_ viewControllable: ViewControllable) {
@@ -139,6 +159,18 @@ final class TopupRouter: Router<TopupInteractable>, TopupRouting {
     // viewLess riblet이라 부모가 직접 present한 view가 없어서 부모가 dismiss 처리 하지 않는다.
     viewController.dismiss(completion: nil)
     navigationControllerable = nil
+  }
+  
+  private func resetChildRouting() {
+    if let cardOnFileRouting = cardOnFileRouting {
+      detachChild(cardOnFileRouting)
+      self.cardOnFileRouting = nil
+    }
+    
+    if let addPaymentRouting = addPaymentRouting {
+      detachChild(addPaymentRouting)
+      self.addPaymentRouting = nil
+    }
   }
   
   // 부모가 건네준 viewController - FinanceHomeViewController

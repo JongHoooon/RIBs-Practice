@@ -12,6 +12,7 @@ protocol TopupDependency: Dependency {
   // topup riblet을 띄운 view가 지정해준 view
   var topupBaseViewController: ViewControllable { get }
   var cardOnFileRepository: CardOnFileRepository { get }
+  var superPayRepository: SuperPayRepository { get }
 }
 
 final class TopupComponent: Component<TopupDependency>,
@@ -20,6 +21,7 @@ final class TopupComponent: Component<TopupDependency>,
                             EnterAmountDependency,
                             CardOnFileDependency {
   
+  var superPayRepository: SuperPayRepository { dependency.superPayRepository }
   var cardOnFileRepository: CardOnFileRepository { dependency.cardOnFileRepository }
   fileprivate var TopupViewController: ViewControllable {
     return dependency.topupBaseViewController

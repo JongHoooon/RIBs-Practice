@@ -10,7 +10,7 @@ import ModernRIBs
 protocol TopupRouting: Routing {
   func cleanupViews()
   
-  func attachAddPaymentMethod()
+  func attachAddPaymentMethod(closeButtonType: DismissButtonType)
   func detachAddPaymentMethod()
   
   func attachEnterAmount()
@@ -18,10 +18,13 @@ protocol TopupRouting: Routing {
   
   func attachCardOnFile(paymentMethods: [PaymentMethod])
   func detachCardOnFile()
+  
+  func popToRoot()
 }
 
 protocol TopupListener: AnyObject {
   func topupDidClose()
+  func topupDidFinish()
 }
 
 protocol TopupInteractorDependency {
@@ -34,6 +37,8 @@ final class TopupInteractor: Interactor,
                              AdaptivePresentationControllerDelegate {
 
   let presentationDelegateProxy: AdaptivePresentaionControllerDelegateProxy
+  
+  private var isEnterAmountRoot: Bool = false
   
   private var paymentMethods: [PaymentMethod] {
     dependency.cardOnFileRepository.cardOnFile.value
@@ -58,11 +63,13 @@ final class TopupInteractor: Interactor,
     
     if let card = dependency.cardOnFileRepository.cardOnFile.value.first {
       // 금액 입력 화면
+      isEnterAmountRoot = true
       dependency.paymentMethodStream.send(card)
       router?.attachEnterAmount()
     } else {
       // 카드 추가 화면
-      router?.attachAddPaymentMethod()
+      isEnterAmountRoot = false
+      router?.attachAddPaymentMethod(closeButtonType: .close)
     }
   }
   
@@ -80,13 +87,21 @@ final class TopupInteractor: Interactor,
   func addPaymentMethodDidTapClose() {
     router?.detachAddPaymentMethod()
     
-    // viewLess riblet이라 부모가 직접 present한 view가 없어서 부모가 dismiss 처리 하지 않는다.
-    listener?.topupDidClose()
+    if isEnterAmountRoot == false {
+      // viewLess riblet이라 부모가 직접 present한 view가 없어서 부모가 dismiss 처리 하지 않는다.
+      listener?.topupDidClose()
+    }
   }
   
   func addPaymentMethodDidAddCard(paymentMethod: PaymentMethod) {
-    router?.detachAddPaymentMethod()
-    listener?.topupDidClose()
+    dependency.paymentMethodStream.send(paymentMethod)
+    
+    if isEnterAmountRoot == true {
+      router?.popToRoot()
+    } else {
+      isEnterAmountRoot = true
+      router?.attachEnterAmount()
+    }
   }
   
   func enterAmountDidTapClose() {
@@ -103,7 +118,7 @@ final class TopupInteractor: Interactor,
   }
   
   func cardOnFileDidTapAddCard() {
-    // attach add card
+    router?.attachAddPaymentMethod(closeButtonType: .back)
   }
   
   func CardOnFileDidSelect(at index: Int) {
@@ -112,5 +127,8 @@ final class TopupInteractor: Interactor,
     }
     router?.detachCardOnFile()
   }
-  
+    
+  func enterAmountDidFinishTopup() {
+    listener?.topupDidFinish()
+  }
 }
