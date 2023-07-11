@@ -1,5 +1,11 @@
 # RIBs-Practice
 
+
+<p align="center">
+<img src="https://github.com/JongHoooon/RIBs-Practice/assets/98168685/df436b37-3b68-40b6-ab86-a51cee2af402" width="60%" height="60%" alt="RIBs"/>
+</p>
+
+
 ## What are RIBs For?
 
 > RIBs는 Uber의 cross-platform 아키텍처 프레임워크입니다. 많은 nested state를 포함하는 큰 규모의 모바일 어플리케이션을 위해 설계됐습니다.
@@ -20,7 +26,7 @@ class 는 unit test 하기 쉬워야하고 격리(isolation)된 상태에서 추
 
 사소하지 않은 아키텍처 패턴을 채택하는 것은 강력한 도구가 없다면 대규모 어플리케이션으로 확장하기 힘듭니다. RIBs는 코드 생성, static analysis, runtime integration 와 관련된 `IDE 도구들을 제공`합니다. - 도구들은 팀의 개발자 생산성을 향상시킵니다.
 
-### [Open-Closed Principle](https://ko.wikipedia.org/wiki/%EA%B0%9C%EB%B0%A9-%ED%8F%90%EC%87%84_%EC%9B%90%EC%B9%99)
+### Open-Closed Principle
 
 개발자들은 `가능한 기존의 코드 수정없이 새로운 기능을 추가`할 수 있어야합니다. 이것은 RIBs를 사용할 때 몇군데에서 볼 수 있습니다. 예를 들어, 개발자는 부모 RIB을 거의 변경하지 않고 부모로부터 의존성이 필요한 복잡한 자식 RIB을 attach 하거나 build 할 수 있습니다. 
 
@@ -35,6 +41,10 @@ class 는 unit test 하기 쉬워야하고 격리(isolation)된 상태에서 추
 <br><br>
 
 ## Parts Of a RIB
+
+<p align="center">
+<img src="https://github.com/JongHoooon/RIBs-Practice/assets/98168685/c1edc7ba-aae7-4a89-acaa-55c8e55863ed" width="80%" height="80%" />
+</p>
 
 ### Interactor
 
@@ -83,10 +93,18 @@ component는 RIB 의존성을 관리하기 위해 사용됩니다. RIB을 구성
 
 ### Downward
 
+<p align="center">
+<img src="https://github.com/JongHoooon/RIBs-Practice/assets/98168685/09ec1e60-fcb9-4b85-9c18-49204c9bd677" width="60%" height="60%" />
+</p>
+
 - rx stream을 사용해 전달
 - 자식 RIB의 build() method에 파라미터로 전달(이 경우 자식의 lifecycle 동안 불변값이다.) 
 
 ### Upward
+
+<p align="center">
+<img src="https://github.com/JongHoooon/RIBs-Practice/assets/98168685/5ccfb1b6-0a53-449d-938f-21ef1091f4cb" width="30%" height="30%" />
+</p>
 
 - listener interface를 통해 전달합니다. (부모가 자식보다 오래살아서)
 - 부모가 자식의 Rx stream을 직접 구독하는대신 이 패턴을 사용하면 몇가지 이점이 있다.
