@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED0A0DB82A57EF300072AE43 /* SuperPayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0A0DB72A57EF300072AE43 /* SuperPayRepository.swift */; };
+		ED2B4BD62A62BA4500737BB7 /* AddPaymentMethod in Frameworks */ = {isa = PBXBuildFile; productRef = ED2B4BD52A62BA4500737BB7 /* AddPaymentMethod */; };
+		ED3F44152A62CFB800D4EDF3 /* FinanceEntity in Frameworks */ = {isa = PBXBuildFile; productRef = ED3F44142A62CFB800D4EDF3 /* FinanceEntity */; };
+		ED3F44172A62CFB800D4EDF3 /* FinanceRepository in Frameworks */ = {isa = PBXBuildFile; productRef = ED3F44162A62CFB800D4EDF3 /* FinanceRepository */; };
+		ED3F44192A62CFB800D4EDF3 /* CombineUtil in Frameworks */ = {isa = PBXBuildFile; productRef = ED3F44182A62CFB800D4EDF3 /* CombineUtil */; };
+		ED3F441B2A62CFB800D4EDF3 /* RIBsUtil in Frameworks */ = {isa = PBXBuildFile; productRef = ED3F441A2A62CFB800D4EDF3 /* RIBsUtil */; };
+		ED3F441D2A62CFB800D4EDF3 /* SuperUI in Frameworks */ = {isa = PBXBuildFile; productRef = ED3F441C2A62CFB800D4EDF3 /* SuperUI */; };
+		ED89E76E2A5529E4005FC8C8 /* TopupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E76B2A5529E4005FC8C8 /* TopupRouter.swift */; };
+		ED89E76F2A5529E4005FC8C8 /* TopupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E76C2A5529E4005FC8C8 /* TopupBuilder.swift */; };
+		ED89E7702A5529E4005FC8C8 /* TopupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E76D2A5529E4005FC8C8 /* TopupInteractor.swift */; };
+		ED89E7762A554A5A005FC8C8 /* EnterAmountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E7722A554A5A005FC8C8 /* EnterAmountRouter.swift */; };
+		ED89E7782A554A5A005FC8C8 /* EnterAmountBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E7742A554A5A005FC8C8 /* EnterAmountBuilder.swift */; };
+		ED89E7792A554A5A005FC8C8 /* EnterAmountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E7752A554A5A005FC8C8 /* EnterAmountInteractor.swift */; };
+		ED89E77D2A554C74005FC8C8 /* SelectedPaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E77A2A554C74005FC8C8 /* SelectedPaymentMethodView.swift */; };
+		ED89E77E2A554C74005FC8C8 /* EnterAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E77B2A554C74005FC8C8 /* EnterAmountViewController.swift */; };
+		ED89E77F2A554C74005FC8C8 /* EnterAmountWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E77C2A554C74005FC8C8 /* EnterAmountWidget.swift */; };
+		ED89E7872A555967005FC8C8 /* CardOnFileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E7832A555967005FC8C8 /* CardOnFileRouter.swift */; };
+		ED89E7892A555967005FC8C8 /* CardOnFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E7852A555967005FC8C8 /* CardOnFileBuilder.swift */; };
+		ED89E78A2A555967005FC8C8 /* CardOnFileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E7862A555967005FC8C8 /* CardOnFileInteractor.swift */; };
+		ED89E78D2A555993005FC8C8 /* CardOnFileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E78B2A555993005FC8C8 /* CardOnFileCell.swift */; };
+		ED89E78E2A555993005FC8C8 /* CardOnFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89E78C2A555993005FC8C8 /* CardOnFileViewController.swift */; };
+		EDE564D42A4C98F700DEE204 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = EDE564D32A4C98F700DEE204 /* CombineExt */; };
+		EDE564D82A4D9F8B00DEE204 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE564D72A4D9F8B00DEE204 /* Formatter.swift */; };
+		EDE564E62A4DB2F500DEE204 /* CardOnFileDashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE564E22A4DB2F500DEE204 /* CardOnFileDashboardRouter.swift */; };
+		EDE564E72A4DB2F500DEE204 /* CardOnFileDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE564E32A4DB2F500DEE204 /* CardOnFileDashboardViewController.swift */; };
+		EDE564E82A4DB2F500DEE204 /* CardOnFileDashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE564E42A4DB2F500DEE204 /* CardOnFileDashboardBuilder.swift */; };
+		EDE564E92A4DB2F500DEE204 /* CardOnFileDashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE564E52A4DB2F500DEE204 /* CardOnFileDashboardInteractor.swift */; };
+		EDE564EC2A4DD36700DEE204 /* AddPaymentMethodButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE564EB2A4DD36700DEE204 /* AddPaymentMethodButton.swift */; };
+		EDE564EE2A4DD7B600DEE204 /* PaymentMehodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE564ED2A4DD7B600DEE204 /* PaymentMehodView.swift */; };
+		EDE564F52A4DE79200DEE204 /* PaymentMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE564F42A4DE79200DEE204 /* PaymentMethodViewModel.swift */; };
+		EDFA5EA42A4AD14800747D27 /* ModernRIBs in Frameworks */ = {isa = PBXBuildFile; productRef = EDFA5EA32A4AD14800747D27 /* ModernRIBs */; };
+		EDFA5EB52A4AF48D00747D27 /* SuperPayDashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA5EB12A4AF48D00747D27 /* SuperPayDashboardRouter.swift */; };
+		EDFA5EB62A4AF48D00747D27 /* SuperPayDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA5EB22A4AF48D00747D27 /* SuperPayDashboardViewController.swift */; };
+		EDFA5EB72A4AF48D00747D27 /* SuperPayDashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA5EB32A4AF48D00747D27 /* SuperPayDashboardBuilder.swift */; };
+		EDFA5EB82A4AF48D00747D27 /* SuperPayDashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA5EB42A4AF48D00747D27 /* SuperPayDashboardInteractor.swift */; };
+		F57EBE552738468700FE9319 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57EBE522738468700FE9319 /* Array+Utils.swift */; };
+		F57F6AE826DB4A2700C0117D /* FinanceHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AE426DB4A2700C0117D /* FinanceHomeRouter.swift */; };
+		F57F6AE926DB4A2700C0117D /* FinanceHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AE526DB4A2700C0117D /* FinanceHomeViewController.swift */; };
+		F57F6AEA26DB4A2700C0117D /* FinanceHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AE626DB4A2700C0117D /* FinanceHomeBuilder.swift */; };
+		F57F6AEB26DB4A2700C0117D /* FinanceHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AE726DB4A2700C0117D /* FinanceHomeInteractor.swift */; };
+		F57F6AF026DB4A2D00C0117D /* ProfileHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AEC26DB4A2D00C0117D /* ProfileHomeRouter.swift */; };
+		F57F6AF126DB4A2D00C0117D /* ProfileHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AED26DB4A2D00C0117D /* ProfileHomeViewController.swift */; };
+		F57F6AF226DB4A2D00C0117D /* ProfileHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AEE26DB4A2D00C0117D /* ProfileHomeBuilder.swift */; };
+		F57F6AF326DB4A2D00C0117D /* ProfileHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AEF26DB4A2D00C0117D /* ProfileHomeInteractor.swift */; };
+		F57F6AFE26DB4CD700C0117D /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AFD26DB4CD700C0117D /* RootTabBarController.swift */; };
+		F5829F5926DB2BC400BFA8CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5829F5826DB2BC400BFA8CD /* AppDelegate.swift */; };
+		F5829F6226DB2BC500BFA8CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5829F6126DB2BC500BFA8CD /* Assets.xcassets */; };
+		F5829F6526DB2BC500BFA8CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5829F6326DB2BC500BFA8CD /* LaunchScreen.storyboard */; };
+		F5829F7426DB34AA00BFA8CD /* AppRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5829F7026DB34AA00BFA8CD /* AppRootRouter.swift */; };
+		F5829F7626DB34AA00BFA8CD /* AppRootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5829F7226DB34AA00BFA8CD /* AppRootBuilder.swift */; };
+		F5829F7726DB34AA00BFA8CD /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5829F7326DB34AA00BFA8CD /* AppRootInteractor.swift */; };
+		F5829F7926DB397300BFA8CD /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5829F7826DB397300BFA8CD /* AppComponent.swift */; };
+		F5EAA219270B395900EF2B70 /* HomeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA213270B395800EF2B70 /* HomeWidgetView.swift */; };
+		F5EAA21A270B395900EF2B70 /* AppHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA214270B395800EF2B70 /* AppHomeBuilder.swift */; };
+		F5EAA21B270B395900EF2B70 /* AppHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA215270B395900EF2B70 /* AppHomeInteractor.swift */; };
+		F5EAA21C270B395900EF2B70 /* AppHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA216270B395900EF2B70 /* AppHomeViewController.swift */; };
+		F5EAA21D270B395900EF2B70 /* HomeWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA217270B395900EF2B70 /* HomeWidgetModel.swift */; };
+		F5EAA21E270B395900EF2B70 /* AppHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA218270B395900EF2B70 /* AppHomeRouter.swift */; };
+		F5EAA229270B3A4500EF2B70 /* TransportHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA222270B3A4500EF2B70 /* TransportHomeViewController.swift */; };
+		F5EAA22A270B3A4500EF2B70 /* TransportHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA223270B3A4500EF2B70 /* TransportHomeRouter.swift */; };
+		F5EAA22B270B3A4500EF2B70 /* TransportHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA224270B3A4500EF2B70 /* TransportHomeBuilder.swift */; };
+		F5EAA22C270B3A4500EF2B70 /* TransportHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA225270B3A4500EF2B70 /* TransportHomeInteractor.swift */; };
+		F5EAA22D270B3A4500EF2B70 /* RideTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA227270B3A4500EF2B70 /* RideTypeView.swift */; };
+		F5EAA22E270B3A4500EF2B70 /* SuperPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA228270B3A4500EF2B70 /* SuperPayView.swift */; };
+		F5EAA230270B3A7100EF2B70 /* RIBs+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EAA22F270B3A7100EF2B70 /* RIBs+Utils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED0A0DB72A57EF300072AE43 /* SuperPayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayRepository.swift; sourceTree = "<group>"; };
+		ED2B4BD22A62B77C00737BB7 /* Profile */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Profile; sourceTree = "<group>"; };
+		ED2B4BD32A62B78A00737BB7 /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
+		ED31C8492A62B62D005BEB68 /* Finance */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Finance; sourceTree = "<group>"; };
+		ED31C84A2A62B650005BEB68 /* Transport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transport; sourceTree = "<group>"; };
+		ED31C84C2A62B681005BEB68 /* CX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CX; sourceTree = "<group>"; };
+		ED89E76B2A5529E4005FC8C8 /* TopupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopupRouter.swift; sourceTree = "<group>"; };
+		ED89E76C2A5529E4005FC8C8 /* TopupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopupBuilder.swift; sourceTree = "<group>"; };
+		ED89E76D2A5529E4005FC8C8 /* TopupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopupInteractor.swift; sourceTree = "<group>"; };
+		ED89E7722A554A5A005FC8C8 /* EnterAmountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAmountRouter.swift; sourceTree = "<group>"; };
+		ED89E7742A554A5A005FC8C8 /* EnterAmountBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAmountBuilder.swift; sourceTree = "<group>"; };
+		ED89E7752A554A5A005FC8C8 /* EnterAmountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAmountInteractor.swift; sourceTree = "<group>"; };
+		ED89E77A2A554C74005FC8C8 /* SelectedPaymentMethodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedPaymentMethodView.swift; sourceTree = "<group>"; };
+		ED89E77B2A554C74005FC8C8 /* EnterAmountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterAmountViewController.swift; path = "../../../../../RIBs-Practice/MiniSuperApp-fastcampus-main/Samples/Topup/EnterAmountViewController.swift"; sourceTree = "<group>"; };
+		ED89E77C2A554C74005FC8C8 /* EnterAmountWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterAmountWidget.swift; sourceTree = "<group>"; };
+		ED89E7832A555967005FC8C8 /* CardOnFileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnFileRouter.swift; sourceTree = "<group>"; };
+		ED89E7852A555967005FC8C8 /* CardOnFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnFileBuilder.swift; sourceTree = "<group>"; };
+		ED89E7862A555967005FC8C8 /* CardOnFileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnFileInteractor.swift; sourceTree = "<group>"; };
+		ED89E78B2A555993005FC8C8 /* CardOnFileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardOnFileCell.swift; path = Samples/Topup/CardOnFileCell.swift; sourceTree = SOURCE_ROOT; };
+		ED89E78C2A555993005FC8C8 /* CardOnFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardOnFileViewController.swift; path = Samples/Topup/CardOnFileViewController.swift; sourceTree = SOURCE_ROOT; };
+		EDE564D72A4D9F8B00DEE204 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		EDE564E22A4DB2F500DEE204 /* CardOnFileDashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnFileDashboardRouter.swift; sourceTree = "<group>"; };
+		EDE564E32A4DB2F500DEE204 /* CardOnFileDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnFileDashboardViewController.swift; sourceTree = "<group>"; };
+		EDE564E42A4DB2F500DEE204 /* CardOnFileDashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnFileDashboardBuilder.swift; sourceTree = "<group>"; };
+		EDE564E52A4DB2F500DEE204 /* CardOnFileDashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnFileDashboardInteractor.swift; sourceTree = "<group>"; };
+		EDE564EB2A4DD36700DEE204 /* AddPaymentMethodButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodButton.swift; sourceTree = "<group>"; };
+		EDE564ED2A4DD7B600DEE204 /* PaymentMehodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMehodView.swift; sourceTree = "<group>"; };
+		EDE564F42A4DE79200DEE204 /* PaymentMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodViewModel.swift; sourceTree = "<group>"; };
+		EDFA5EA52A4AE85400747D27 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EDFA5EB12A4AF48D00747D27 /* SuperPayDashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardRouter.swift; sourceTree = "<group>"; };
+		EDFA5EB22A4AF48D00747D27 /* SuperPayDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardViewController.swift; sourceTree = "<group>"; };
+		EDFA5EB32A4AF48D00747D27 /* SuperPayDashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardBuilder.swift; sourceTree = "<group>"; };
+		EDFA5EB42A4AF48D00747D27 /* SuperPayDashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardInteractor.swift; sourceTree = "<group>"; };
+		F57EBE522738468700FE9319 /* Array+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
+		F57F6AE426DB4A2700C0117D /* FinanceHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceHomeRouter.swift; sourceTree = "<group>"; };
+		F57F6AE526DB4A2700C0117D /* FinanceHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceHomeViewController.swift; sourceTree = "<group>"; };
+		F57F6AE626DB4A2700C0117D /* FinanceHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceHomeBuilder.swift; sourceTree = "<group>"; };
+		F57F6AE726DB4A2700C0117D /* FinanceHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceHomeInteractor.swift; sourceTree = "<group>"; };
+		F57F6AEC26DB4A2D00C0117D /* ProfileHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeRouter.swift; sourceTree = "<group>"; };
+		F57F6AED26DB4A2D00C0117D /* ProfileHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewController.swift; sourceTree = "<group>"; };
+		F57F6AEE26DB4A2D00C0117D /* ProfileHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeBuilder.swift; sourceTree = "<group>"; };
+		F57F6AEF26DB4A2D00C0117D /* ProfileHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeInteractor.swift; sourceTree = "<group>"; };
+		F57F6AFD26DB4CD700C0117D /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		F5829F5526DB2BC400BFA8CD /* MiniSuperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniSuperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5829F5826DB2BC400BFA8CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5829F6126DB2BC500BFA8CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5829F6426DB2BC500BFA8CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5829F6626DB2BC500BFA8CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5829F7026DB34AA00BFA8CD /* AppRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootRouter.swift; sourceTree = "<group>"; };
+		F5829F7226DB34AA00BFA8CD /* AppRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootBuilder.swift; sourceTree = "<group>"; };
+		F5829F7326DB34AA00BFA8CD /* AppRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootInteractor.swift; sourceTree = "<group>"; };
+		F5829F7826DB397300BFA8CD /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		F5EAA213270B395800EF2B70 /* HomeWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWidgetView.swift; sourceTree = "<group>"; };
+		F5EAA214270B395800EF2B70 /* AppHomeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHomeBuilder.swift; sourceTree = "<group>"; };
+		F5EAA215270B395900EF2B70 /* AppHomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHomeInteractor.swift; sourceTree = "<group>"; };
+		F5EAA216270B395900EF2B70 /* AppHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHomeViewController.swift; sourceTree = "<group>"; };
+		F5EAA217270B395900EF2B70 /* HomeWidgetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWidgetModel.swift; sourceTree = "<group>"; };
+		F5EAA218270B395900EF2B70 /* AppHomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHomeRouter.swift; sourceTree = "<group>"; };
+		F5EAA222270B3A4500EF2B70 /* TransportHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHomeViewController.swift; sourceTree = "<group>"; };
+		F5EAA223270B3A4500EF2B70 /* TransportHomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHomeRouter.swift; sourceTree = "<group>"; };
+		F5EAA224270B3A4500EF2B70 /* TransportHomeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHomeBuilder.swift; sourceTree = "<group>"; };
+		F5EAA225270B3A4500EF2B70 /* TransportHomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHomeInteractor.swift; sourceTree = "<group>"; };
+		F5EAA227270B3A4500EF2B70 /* RideTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideTypeView.swift; sourceTree = "<group>"; };
+		F5EAA228270B3A4500EF2B70 /* SuperPayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperPayView.swift; sourceTree = "<group>"; };
+		F5EAA22F270B3A7100EF2B70 /* RIBs+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RIBs+Utils.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5829F5226DB2BC400BFA8CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE564D42A4C98F700DEE204 /* CombineExt in Frameworks */,
+				ED2B4BD62A62BA4500737BB7 /* AddPaymentMethod in Frameworks */,
+				ED3F44192A62CFB800D4EDF3 /* CombineUtil in Frameworks */,
+				ED3F44152A62CFB800D4EDF3 /* FinanceEntity in Frameworks */,
+				ED3F441D2A62CFB800D4EDF3 /* SuperUI in Frameworks */,
+				EDFA5EA42A4AD14800747D27 /* ModernRIBs in Frameworks */,
+				ED3F441B2A62CFB800D4EDF3 /* RIBsUtil in Frameworks */,
+				ED3F44172A62CFB800D4EDF3 /* FinanceRepository in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED2B4BD42A62BA4500737BB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED89E76A2A5529D4005FC8C8 /* Topup */ = {
+			isa = PBXGroup;
+			children = (
+				ED89E7822A55594B005FC8C8 /* CardOnFile */,
+				ED89E7712A554A46005FC8C8 /* EnterAmount */,
+				ED89E76B2A5529E4005FC8C8 /* TopupRouter.swift */,
+				ED89E76C2A5529E4005FC8C8 /* TopupBuilder.swift */,
+				ED89E76D2A5529E4005FC8C8 /* TopupInteractor.swift */,
+			);
+			path = Topup;
+			sourceTree = "<group>";
+		};
+		ED89E7712A554A46005FC8C8 /* EnterAmount */ = {
+			isa = PBXGroup;
+			children = (
+				ED89E7722A554A5A005FC8C8 /* EnterAmountRouter.swift */,
+				ED89E7742A554A5A005FC8C8 /* EnterAmountBuilder.swift */,
+				ED89E7752A554A5A005FC8C8 /* EnterAmountInteractor.swift */,
+				ED89E77B2A554C74005FC8C8 /* EnterAmountViewController.swift */,
+				ED89E77C2A554C74005FC8C8 /* EnterAmountWidget.swift */,
+				ED89E77A2A554C74005FC8C8 /* SelectedPaymentMethodView.swift */,
+			);
+			path = EnterAmount;
+			sourceTree = "<group>";
+		};
+		ED89E7822A55594B005FC8C8 /* CardOnFile */ = {
+			isa = PBXGroup;
+			children = (
+				ED89E7832A555967005FC8C8 /* CardOnFileRouter.swift */,
+				ED89E7852A555967005FC8C8 /* CardOnFileBuilder.swift */,
+				ED89E7862A555967005FC8C8 /* CardOnFileInteractor.swift */,
+				ED89E78B2A555993005FC8C8 /* CardOnFileCell.swift */,
+				ED89E78C2A555993005FC8C8 /* CardOnFileViewController.swift */,
+			);
+			path = CardOnFile;
+			sourceTree = "<group>";
+		};
+		EDE564D92A4DB02000DEE204 /* CardOnFileDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EDE564EA2A4DD35100DEE204 /* Views */,
+				EDE564E22A4DB2F500DEE204 /* CardOnFileDashboardRouter.swift */,
+				EDE564E32A4DB2F500DEE204 /* CardOnFileDashboardViewController.swift */,
+				EDE564E42A4DB2F500DEE204 /* CardOnFileDashboardBuilder.swift */,
+				EDE564E52A4DB2F500DEE204 /* CardOnFileDashboardInteractor.swift */,
+				EDE564F42A4DE79200DEE204 /* PaymentMethodViewModel.swift */,
+			);
+			path = CardOnFileDashboard;
+			sourceTree = "<group>";
+		};
+		EDE564EA2A4DD35100DEE204 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EDE564EB2A4DD36700DEE204 /* AddPaymentMethodButton.swift */,
+				EDE564ED2A4DD7B600DEE204 /* PaymentMehodView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EDE564F12A4DDBCF00DEE204 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				ED0A0DB72A57EF300072AE43 /* SuperPayRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		EDFA5EA62A4AF40000747D27 /* SupperPayDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EDFA5EB12A4AF48D00747D27 /* SuperPayDashboardRouter.swift */,
+				EDFA5EB22A4AF48D00747D27 /* SuperPayDashboardViewController.swift */,
+				EDFA5EB32A4AF48D00747D27 /* SuperPayDashboardBuilder.swift */,
+				EDFA5EB42A4AF48D00747D27 /* SuperPayDashboardInteractor.swift */,
+				EDE564D72A4D9F8B00DEE204 /* Formatter.swift */,
+			);
+			path = SupperPayDashboard;
+			sourceTree = "<group>";
+		};
+		F57F6AD926DB49E500C0117D /* AppHome */ = {
+			isa = PBXGroup;
+			children = (
+				F5EAA214270B395800EF2B70 /* AppHomeBuilder.swift */,
+				F5EAA215270B395900EF2B70 /* AppHomeInteractor.swift */,
+				F5EAA218270B395900EF2B70 /* AppHomeRouter.swift */,
+				F5EAA216270B395900EF2B70 /* AppHomeViewController.swift */,
+				F5EAA217270B395900EF2B70 /* HomeWidgetModel.swift */,
+				F5EAA212270B395800EF2B70 /* Views */,
+			);
+			path = AppHome;
+			sourceTree = "<group>";
+		};
+		F57F6ADA26DB49EA00C0117D /* FinanceHome */ = {
+			isa = PBXGroup;
+			children = (
+				EDE564F12A4DDBCF00DEE204 /* Repository */,
+				ED89E76A2A5529D4005FC8C8 /* Topup */,
+				EDE564D92A4DB02000DEE204 /* CardOnFileDashboard */,
+				EDFA5EA62A4AF40000747D27 /* SupperPayDashboard */,
+				F57F6AE426DB4A2700C0117D /* FinanceHomeRouter.swift */,
+				F57F6AE526DB4A2700C0117D /* FinanceHomeViewController.swift */,
+				F57F6AE626DB4A2700C0117D /* FinanceHomeBuilder.swift */,
+				F57F6AE726DB4A2700C0117D /* FinanceHomeInteractor.swift */,
+			);
+			path = FinanceHome;
+			sourceTree = "<group>";
+		};
+		F57F6ADB26DB49FD00C0117D /* ProfileHome */ = {
+			isa = PBXGroup;
+			children = (
+				F57F6AEC26DB4A2D00C0117D /* ProfileHomeRouter.swift */,
+				F57F6AED26DB4A2D00C0117D /* ProfileHomeViewController.swift */,
+				F57F6AEE26DB4A2D00C0117D /* ProfileHomeBuilder.swift */,
+				F57F6AEF26DB4A2D00C0117D /* ProfileHomeInteractor.swift */,
+			);
+			path = ProfileHome;
+			sourceTree = "<group>";
+		};
+		F57F6AFF26DB585100C0117D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F57EBE522738468700FE9319 /* Array+Utils.swift */,
+				F5EAA22F270B3A7100EF2B70 /* RIBs+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F5829F4C26DB2BC400BFA8CD = {
+			isa = PBXGroup;
+			children = (
+				ED2B4BD32A62B78A00737BB7 /* Platform */,
+				ED2B4BD22A62B77C00737BB7 /* Profile */,
+				ED31C84A2A62B650005BEB68 /* Transport */,
+				ED31C8492A62B62D005BEB68 /* Finance */,
+				ED31C84C2A62B681005BEB68 /* CX */,
+				F5829F5726DB2BC400BFA8CD /* MiniSuperApp */,
+				F5829F5626DB2BC400BFA8CD /* Products */,
+				ED2B4BD42A62BA4500737BB7 /* Frameworks */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		F5829F5626DB2BC400BFA8CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5829F5526DB2BC400BFA8CD /* MiniSuperApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5829F5726DB2BC400BFA8CD /* MiniSuperApp */ = {
+			isa = PBXGroup;
+			children = (
+				F5829F7A26DB3AF900BFA8CD /* AppDelegate */,
+				F5829F6F26DB33CF00BFA8CD /* AppRoot */,
+				F57F6AD926DB49E500C0117D /* AppHome */,
+				F5EAA221270B3A4500EF2B70 /* TransportHome */,
+				F57F6ADA26DB49EA00C0117D /* FinanceHome */,
+				F57F6ADB26DB49FD00C0117D /* ProfileHome */,
+				F57F6AFF26DB585100C0117D /* Utils */,
+				F5829F6126DB2BC500BFA8CD /* Assets.xcassets */,
+				F5829F6326DB2BC500BFA8CD /* LaunchScreen.storyboard */,
+				F5829F6626DB2BC500BFA8CD /* Info.plist */,
+				EDFA5EA52A4AE85400747D27 /* README.md */,
+			);
+			path = MiniSuperApp;
+			sourceTree = "<group>";
+		};
+		F5829F6F26DB33CF00BFA8CD /* AppRoot */ = {
+			isa = PBXGroup;
+			children = (
+				F5829F7026DB34AA00BFA8CD /* AppRootRouter.swift */,
+				F5829F7226DB34AA00BFA8CD /* AppRootBuilder.swift */,
+				F5829F7326DB34AA00BFA8CD /* AppRootInteractor.swift */,
+				F57F6AFD26DB4CD700C0117D /* RootTabBarController.swift */,
+			);
+			path = AppRoot;
+			sourceTree = "<group>";
+		};
+		F5829F7A26DB3AF900BFA8CD /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F5829F5826DB2BC400BFA8CD /* AppDelegate.swift */,
+				F5829F7826DB397300BFA8CD /* AppComponent.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F5EAA212270B395800EF2B70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5EAA213270B395800EF2B70 /* HomeWidgetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5EAA221270B3A4500EF2B70 /* TransportHome */ = {
+			isa = PBXGroup;
+			children = (
+				F5EAA222270B3A4500EF2B70 /* TransportHomeViewController.swift */,
+				F5EAA223270B3A4500EF2B70 /* TransportHomeRouter.swift */,
+				F5EAA224270B3A4500EF2B70 /* TransportHomeBuilder.swift */,
+				F5EAA225270B3A4500EF2B70 /* TransportHomeInteractor.swift */,
+				F5EAA226270B3A4500EF2B70 /* Views */,
+			);
+			path = TransportHome;
+			sourceTree = "<group>";
+		};
+		F5EAA226270B3A4500EF2B70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5EAA227270B3A4500EF2B70 /* RideTypeView.swift */,
+				F5EAA228270B3A4500EF2B70 /* SuperPayView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5829F5426DB2BC400BFA8CD /* MiniSuperApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5829F6926DB2BC500BFA8CD /* Build configuration list for PBXNativeTarget "MiniSuperApp" */;
+			buildPhases = (
+				F5829F5126DB2BC400BFA8CD /* Sources */,
+				F5829F5226DB2BC400BFA8CD /* Frameworks */,
+				F5829F5326DB2BC400BFA8CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiniSuperApp;
+			packageProductDependencies = (
+				EDFA5EA32A4AD14800747D27 /* ModernRIBs */,
+				EDE564D32A4C98F700DEE204 /* CombineExt */,
+				ED2B4BD52A62BA4500737BB7 /* AddPaymentMethod */,
+				ED3F44142A62CFB800D4EDF3 /* FinanceEntity */,
+				ED3F44162A62CFB800D4EDF3 /* FinanceRepository */,
+				ED3F44182A62CFB800D4EDF3 /* CombineUtil */,
+				ED3F441A2A62CFB800D4EDF3 /* RIBsUtil */,
+				ED3F441C2A62CFB800D4EDF3 /* SuperUI */,
+			);
+			productName = SuperRedApp;
+			productReference = F5829F5526DB2BC400BFA8CD /* MiniSuperApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5829F4D26DB2BC400BFA8CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F5829F5426DB2BC400BFA8CD = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = F5829F5026DB2BC400BFA8CD /* Build configuration list for PBXProject "MiniSuperApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5829F4C26DB2BC400BFA8CD;
+			packageReferences = (
+				EDFA5EA22A4AD14800747D27 /* XCRemoteSwiftPackageReference "ModernRIBs" */,
+				EDE564D22A4C98F700DEE204 /* XCRemoteSwiftPackageReference "CombineExt" */,
+			);
+			productRefGroup = F5829F5626DB2BC400BFA8CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5829F5426DB2BC400BFA8CD /* MiniSuperApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5829F5326DB2BC400BFA8CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5829F6526DB2BC500BFA8CD /* LaunchScreen.storyboard in Resources */,
+				F5829F6226DB2BC500BFA8CD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5829F5126DB2BC400BFA8CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED89E78D2A555993005FC8C8 /* CardOnFileCell.swift in Sources */,
+				F5EAA229270B3A4500EF2B70 /* TransportHomeViewController.swift in Sources */,
+				F57F6AF226DB4A2D00C0117D /* ProfileHomeBuilder.swift in Sources */,
+				ED89E78A2A555967005FC8C8 /* CardOnFileInteractor.swift in Sources */,
+				F5EAA22A270B3A4500EF2B70 /* TransportHomeRouter.swift in Sources */,
+				F57F6AEA26DB4A2700C0117D /* FinanceHomeBuilder.swift in Sources */,
+				F5EAA22E270B3A4500EF2B70 /* SuperPayView.swift in Sources */,
+				EDE564EC2A4DD36700DEE204 /* AddPaymentMethodButton.swift in Sources */,
+				ED89E7702A5529E4005FC8C8 /* TopupInteractor.swift in Sources */,
+				F57F6AF126DB4A2D00C0117D /* ProfileHomeViewController.swift in Sources */,
+				ED89E7792A554A5A005FC8C8 /* EnterAmountInteractor.swift in Sources */,
+				ED89E7892A555967005FC8C8 /* CardOnFileBuilder.swift in Sources */,
+				EDE564E72A4DB2F500DEE204 /* CardOnFileDashboardViewController.swift in Sources */,
+				F57F6AF326DB4A2D00C0117D /* ProfileHomeInteractor.swift in Sources */,
+				F5829F7626DB34AA00BFA8CD /* AppRootBuilder.swift in Sources */,
+				F5EAA230270B3A7100EF2B70 /* RIBs+Utils.swift in Sources */,
+				F5EAA22B270B3A4500EF2B70 /* TransportHomeBuilder.swift in Sources */,
+				F5EAA21D270B395900EF2B70 /* HomeWidgetModel.swift in Sources */,
+				F5EAA21E270B395900EF2B70 /* AppHomeRouter.swift in Sources */,
+				ED89E76E2A5529E4005FC8C8 /* TopupRouter.swift in Sources */,
+				F5EAA21A270B395900EF2B70 /* AppHomeBuilder.swift in Sources */,
+				F5EAA22C270B3A4500EF2B70 /* TransportHomeInteractor.swift in Sources */,
+				ED89E77D2A554C74005FC8C8 /* SelectedPaymentMethodView.swift in Sources */,
+				F5829F7726DB34AA00BFA8CD /* AppRootInteractor.swift in Sources */,
+				F5EAA22D270B3A4500EF2B70 /* RideTypeView.swift in Sources */,
+				EDE564E62A4DB2F500DEE204 /* CardOnFileDashboardRouter.swift in Sources */,
+				EDFA5EB82A4AF48D00747D27 /* SuperPayDashboardInteractor.swift in Sources */,
+				EDE564D82A4D9F8B00DEE204 /* Formatter.swift in Sources */,
+				F5EAA219270B395900EF2B70 /* HomeWidgetView.swift in Sources */,
+				F57F6AFE26DB4CD700C0117D /* RootTabBarController.swift in Sources */,
+				EDFA5EB72A4AF48D00747D27 /* SuperPayDashboardBuilder.swift in Sources */,
+				ED89E7782A554A5A005FC8C8 /* EnterAmountBuilder.swift in Sources */,
+				ED89E7762A554A5A005FC8C8 /* EnterAmountRouter.swift in Sources */,
+				F57F6AEB26DB4A2700C0117D /* FinanceHomeInteractor.swift in Sources */,
+				EDE564E92A4DB2F500DEE204 /* CardOnFileDashboardInteractor.swift in Sources */,
+				ED0A0DB82A57EF300072AE43 /* SuperPayRepository.swift in Sources */,
+				F5EAA21B270B395900EF2B70 /* AppHomeInteractor.swift in Sources */,
+				ED89E77E2A554C74005FC8C8 /* EnterAmountViewController.swift in Sources */,
+				F57F6AE826DB4A2700C0117D /* FinanceHomeRouter.swift in Sources */,
+				F57F6AE926DB4A2700C0117D /* FinanceHomeViewController.swift in Sources */,
+				F5829F5926DB2BC400BFA8CD /* AppDelegate.swift in Sources */,
+				EDE564EE2A4DD7B600DEE204 /* PaymentMehodView.swift in Sources */,
+				F5EAA21C270B395900EF2B70 /* AppHomeViewController.swift in Sources */,
+				ED89E7872A555967005FC8C8 /* CardOnFileRouter.swift in Sources */,
+				EDE564F52A4DE79200DEE204 /* PaymentMethodViewModel.swift in Sources */,
+				EDFA5EB52A4AF48D00747D27 /* SuperPayDashboardRouter.swift in Sources */,
+				F5829F7926DB397300BFA8CD /* AppComponent.swift in Sources */,
+				F57F6AF026DB4A2D00C0117D /* ProfileHomeRouter.swift in Sources */,
+				EDFA5EB62A4AF48D00747D27 /* SuperPayDashboardViewController.swift in Sources */,
+				F57EBE552738468700FE9319 /* Array+Utils.swift in Sources */,
+				ED89E78E2A555993005FC8C8 /* CardOnFileViewController.swift in Sources */,
+				EDE564E82A4DB2F500DEE204 /* CardOnFileDashboardBuilder.swift in Sources */,
+				F5829F7426DB34AA00BFA8CD /* AppRootRouter.swift in Sources */,
+				ED89E76F2A5529E4005FC8C8 /* TopupBuilder.swift in Sources */,
+				ED89E77F2A554C74005FC8C8 /* EnterAmountWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5829F6326DB2BC500BFA8CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5829F6426DB2BC500BFA8CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5829F6726DB2BC500BFA8CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5829F6826DB2BC500BFA8CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5829F6A26DB2BC500BFA8CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniSuperApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.red.MiniSuperApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F5829F6B26DB2BC500BFA8CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniSuperApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.red.MiniSuperApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5829F5026DB2BC400BFA8CD /* Build configuration list for PBXProject "MiniSuperApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5829F6726DB2BC500BFA8CD /* Debug */,
+				F5829F6826DB2BC500BFA8CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5829F6926DB2BC500BFA8CD /* Build configuration list for PBXNativeTarget "MiniSuperApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5829F6A26DB2BC500BFA8CD /* Debug */,
+				F5829F6B26DB2BC500BFA8CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDE564D22A4C98F700DEE204 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineExt.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.8.1;
+			};
+		};
+		EDFA5EA22A4AD14800747D27 /* XCRemoteSwiftPackageReference "ModernRIBs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DevYeom/ModernRIBs.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED2B4BD52A62BA4500737BB7 /* AddPaymentMethod */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AddPaymentMethod;
+		};
+		ED3F44142A62CFB800D4EDF3 /* FinanceEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FinanceEntity;
+		};
+		ED3F44162A62CFB800D4EDF3 /* FinanceRepository */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FinanceRepository;
+		};
+		ED3F44182A62CFB800D4EDF3 /* CombineUtil */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CombineUtil;
+		};
+		ED3F441A2A62CFB800D4EDF3 /* RIBsUtil */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RIBsUtil;
+		};
+		ED3F441C2A62CFB800D4EDF3 /* SuperUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SuperUI;
+		};
+		EDE564D32A4C98F700DEE204 /* CombineExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE564D22A4C98F700DEE204 /* XCRemoteSwiftPackageReference "CombineExt" */;
+			productName = CombineExt;
+		};
+		EDFA5EA32A4AD14800747D27 /* ModernRIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDFA5EA22A4AD14800747D27 /* XCRemoteSwiftPackageReference "ModernRIBs" */;
+			productName = ModernRIBs;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F5829F4D26DB2BC400BFA8CD /* Project object */;
+}
