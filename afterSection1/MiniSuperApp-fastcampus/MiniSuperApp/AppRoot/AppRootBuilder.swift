@@ -1,4 +1,5 @@
 import ModernRIBs
+import ProfileHome
 import AppHome
 import FinanceHome
 import UIKit

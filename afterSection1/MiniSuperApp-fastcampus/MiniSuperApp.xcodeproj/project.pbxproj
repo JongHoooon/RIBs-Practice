@@ -14,15 +14,12 @@
 		ED3F441B2A62CFB800D4EDF3 /* RIBsUtil in Frameworks */ = {isa = PBXBuildFile; productRef = ED3F441A2A62CFB800D4EDF3 /* RIBsUtil */; };
 		ED3F441D2A62CFB800D4EDF3 /* SuperUI in Frameworks */ = {isa = PBXBuildFile; productRef = ED3F441C2A62CFB800D4EDF3 /* SuperUI */; };
 		ED3F44212A62D54600D4EDF3 /* Topup in Frameworks */ = {isa = PBXBuildFile; productRef = ED3F44202A62D54600D4EDF3 /* Topup */; };
+		ED50D3562A63EAF600F0A785 /* ProfileHome in Frameworks */ = {isa = PBXBuildFile; productRef = ED50D3552A63EAF600F0A785 /* ProfileHome */; };
 		ED5D2E652A63195E00E066AD /* AppHome in Frameworks */ = {isa = PBXBuildFile; productRef = ED5D2E642A63195E00E066AD /* AppHome */; };
 		ED82107C2A6314350083602F /* FinanceHome in Frameworks */ = {isa = PBXBuildFile; productRef = ED82107B2A6314350083602F /* FinanceHome */; };
 		ED86AB132A6315EE0003E0B8 /* TransportHome in Frameworks */ = {isa = PBXBuildFile; productRef = ED86AB122A6315EE0003E0B8 /* TransportHome */; };
 		EDE564D42A4C98F700DEE204 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = EDE564D32A4C98F700DEE204 /* CombineExt */; };
 		EDFA5EA42A4AD14800747D27 /* ModernRIBs in Frameworks */ = {isa = PBXBuildFile; productRef = EDFA5EA32A4AD14800747D27 /* ModernRIBs */; };
-		F57F6AF026DB4A2D00C0117D /* ProfileHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AEC26DB4A2D00C0117D /* ProfileHomeRouter.swift */; };
-		F57F6AF126DB4A2D00C0117D /* ProfileHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AED26DB4A2D00C0117D /* ProfileHomeViewController.swift */; };
-		F57F6AF226DB4A2D00C0117D /* ProfileHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AEE26DB4A2D00C0117D /* ProfileHomeBuilder.swift */; };
-		F57F6AF326DB4A2D00C0117D /* ProfileHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AEF26DB4A2D00C0117D /* ProfileHomeInteractor.swift */; };
 		F57F6AFE26DB4CD700C0117D /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F6AFD26DB4CD700C0117D /* RootTabBarController.swift */; };
 		F5829F5926DB2BC400BFA8CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5829F5826DB2BC400BFA8CD /* AppDelegate.swift */; };
 		F5829F6226DB2BC500BFA8CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5829F6126DB2BC500BFA8CD /* Assets.xcassets */; };
@@ -40,10 +37,6 @@
 		ED31C84A2A62B650005BEB68 /* Transport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transport; sourceTree = "<group>"; };
 		ED31C84C2A62B681005BEB68 /* CX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CX; sourceTree = "<group>"; };
 		EDFA5EA52A4AE85400747D27 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F57F6AEC26DB4A2D00C0117D /* ProfileHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeRouter.swift; sourceTree = "<group>"; };
-		F57F6AED26DB4A2D00C0117D /* ProfileHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewController.swift; sourceTree = "<group>"; };
-		F57F6AEE26DB4A2D00C0117D /* ProfileHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeBuilder.swift; sourceTree = "<group>"; };
-		F57F6AEF26DB4A2D00C0117D /* ProfileHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeInteractor.swift; sourceTree = "<group>"; };
 		F57F6AFD26DB4CD700C0117D /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		F5829F5526DB2BC400BFA8CD /* MiniSuperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniSuperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5829F5826DB2BC400BFA8CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +57,7 @@
 				EDE564D42A4C98F700DEE204 /* CombineExt in Frameworks */,
 				ED2B4BD62A62BA4500737BB7 /* AddPaymentMethod in Frameworks */,
 				ED3F44192A62CFB800D4EDF3 /* CombineUtil in Frameworks */,
+				ED50D3562A63EAF600F0A785 /* ProfileHome in Frameworks */,
 				ED3F44212A62D54600D4EDF3 /* Topup in Frameworks */,
 				ED3F44152A62CFB800D4EDF3 /* FinanceEntity in Frameworks */,
 				ED3F441D2A62CFB800D4EDF3 /* SuperUI in Frameworks */,
@@ -84,24 +78,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F57F6ADB26DB49FD00C0117D /* ProfileHome */ = {
-			isa = PBXGroup;
-			children = (
-				F57F6AEC26DB4A2D00C0117D /* ProfileHomeRouter.swift */,
-				F57F6AED26DB4A2D00C0117D /* ProfileHomeViewController.swift */,
-				F57F6AEE26DB4A2D00C0117D /* ProfileHomeBuilder.swift */,
-				F57F6AEF26DB4A2D00C0117D /* ProfileHomeInteractor.swift */,
-			);
-			path = ProfileHome;
-			sourceTree = "<group>";
-		};
-		F57F6AFF26DB585100C0117D /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		F5829F4C26DB2BC400BFA8CD = {
@@ -134,8 +110,6 @@
 			children = (
 				F5829F7A26DB3AF900BFA8CD /* AppDelegate */,
 				F5829F6F26DB33CF00BFA8CD /* AppRoot */,
-				F57F6ADB26DB49FD00C0117D /* ProfileHome */,
-				F57F6AFF26DB585100C0117D /* Utils */,
 				F5829F6126DB2BC500BFA8CD /* Assets.xcassets */,
 				F5829F6326DB2BC500BFA8CD /* LaunchScreen.storyboard */,
 				F5829F6626DB2BC500BFA8CD /* Info.plist */,
@@ -193,6 +167,7 @@
 				ED82107B2A6314350083602F /* FinanceHome */,
 				ED86AB122A6315EE0003E0B8 /* TransportHome */,
 				ED5D2E642A63195E00E066AD /* AppHome */,
+				ED50D3552A63EAF600F0A785 /* ProfileHome */,
 			);
 			productName = SuperRedApp;
 			productReference = F5829F5526DB2BC400BFA8CD /* MiniSuperApp.app */;
@@ -251,15 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F57F6AF226DB4A2D00C0117D /* ProfileHomeBuilder.swift in Sources */,
-				F57F6AF126DB4A2D00C0117D /* ProfileHomeViewController.swift in Sources */,
-				F57F6AF326DB4A2D00C0117D /* ProfileHomeInteractor.swift in Sources */,
 				F5829F7626DB34AA00BFA8CD /* AppRootBuilder.swift in Sources */,
 				F5829F7726DB34AA00BFA8CD /* AppRootInteractor.swift in Sources */,
 				F57F6AFE26DB4CD700C0117D /* RootTabBarController.swift in Sources */,
 				F5829F5926DB2BC400BFA8CD /* AppDelegate.swift in Sources */,
 				F5829F7926DB397300BFA8CD /* AppComponent.swift in Sources */,
-				F57F6AF026DB4A2D00C0117D /* ProfileHomeRouter.swift in Sources */,
 				F5829F7426DB34AA00BFA8CD /* AppRootRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +471,10 @@
 		ED3F44202A62D54600D4EDF3 /* Topup */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Topup;
+		};
+		ED50D3552A63EAF600F0A785 /* ProfileHome */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProfileHome;
 		};
 		ED5D2E642A63195E00E066AD /* AppHome */ = {
 			isa = XCSwiftPackageProductDependency;
