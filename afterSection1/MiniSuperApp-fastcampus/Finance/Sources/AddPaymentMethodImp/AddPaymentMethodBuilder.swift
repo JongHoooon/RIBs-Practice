@@ -8,6 +8,7 @@
 import ModernRIBs
 import FinanceRepository
 import RIBsUtil
+import AddPaymentMethod
 
 public protocol AddPaymentMethodDependency: Dependency {
   var cardOnFileRepository: CardOnFileRepository { get }
@@ -20,13 +21,6 @@ final class AddPaymentMethodComponent: Component<AddPaymentMethodDependency>,
 }
 
 // MARK: - Builder
-
-public protocol AddPaymentMethodBuildable: Buildable {
-  func build(
-    withListener listener: AddPaymentMethodListener,
-    closeButtonType: DismissButtonType
-  ) -> ViewableRouting
-}
 
 public final class AddPaymentMethodBuilder: Builder<AddPaymentMethodDependency>,
                                             AddPaymentMethodBuildable {

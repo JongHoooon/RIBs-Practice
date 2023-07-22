@@ -8,17 +8,18 @@ public protocol FinanceHomeDependency: Dependency {
   var cardOnFileRepository: CardOnFileRepository { get }
   var superPayRepository: SuperPayRepository { get }
   var topupBuildable: TopupBuildable { get }
+  var addPaymentMethodBuildable: AddPaymentMethodBuildable { get }
 }
 
 final class FinanceHomeComponent: Component<FinanceHomeDependency>,
                                   SuperPayDashboardDependency,
-                                  CardOnFileDashboardDependency,
-                                  AddPaymentMethodDependency {
+                                  CardOnFileDashboardDependency {
   
   var cardOnFileRepository: CardOnFileRepository { dependency.cardOnFileRepository } // root에서 생성하게 수정
   var superPayRepository: SuperPayRepository { dependency.superPayRepository }
   var balance: ReadOnlyCurrentValuePublisher<Double> { superPayRepository.balance } // 잔액 읽기 전용
   var topupBuildable: TopupBuildable { dependency.topupBuildable }
+  var addPaymentMethodBuildable: AddPaymentMethodBuildable { dependency.addPaymentMethodBuildable }
 }
 
 // MARK: - Builder
@@ -47,14 +48,13 @@ public final class FinanceHomeBuilder: Builder<FinanceHomeDependency>, FinanceHo
     
     let superPayDashboardBuilder = SuperPayDashboardBuilder(dependency: component)
     let cardOnFileDashboardBuilder = CardOnFileDashboardBuilder(dependency: component)
-    let addPaymentMethodBuilder = AddPaymentMethodBuilder(dependency: component)
     
     return FinanceHomeRouter(
       interactor: interactor,
       viewController: viewController,
       superPayDashboardBuildable: superPayDashboardBuilder,
       cardOnFileDashboardBuildable: cardOnFileDashboardBuilder,
-      addPaymentMethodBuildable: addPaymentMethodBuilder,
+      addPaymentMethodBuildable: component.addPaymentMethodBuildable,
       topupBuildable: component.topupBuildable
     )
   }
