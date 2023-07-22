@@ -5,6 +5,7 @@
 //  Created by JongHoon on 2023/06/29.
 //
 
+import Foundation
 import ModernRIBs
 import Combine
 import FinanceRepository
@@ -52,7 +53,9 @@ final class CardOnFileDashboardInteractor: PresentableInteractor<CardOnFileDashb
   override func didBecomeActive() {
     super.didBecomeActive()
     
-    dependency.cardsOnFileRepository.cardOnFile.sink { methods in
+    dependency.cardsOnFileRepository.cardOnFile
+      .receive(on: DispatchQueue.main)
+      .sink { methods in
       let viewModels = methods
         .prefix(5)
         .map(PaymentMethodViewModel.init)
