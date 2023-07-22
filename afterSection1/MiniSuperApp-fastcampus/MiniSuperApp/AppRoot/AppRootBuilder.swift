@@ -23,14 +23,15 @@ final class AppRootBuilder: Builder<AppRootDependency>, AppRootBuildable {
   }
   
   func build() -> (launchRouter: LaunchRouting, urlHandler: URLHandler) {
+    let tabBar = RootTabBarController()
+    
     let component = AppRootComponent(
       dependency: dependency,
       cardOnFileRepository: CardOnFileRepositoryImp(),
-      superPayRepository: SuperPayRepositoryImp()
+      superPayRepository: SuperPayRepositoryImp(),
+      rootViewController: tabBar
     )
-    
-    let tabBar = RootTabBarController()
-    
+      
     let interactor = AppRootInteractor(presenter: tabBar)
     
     /// 3개의 자식들

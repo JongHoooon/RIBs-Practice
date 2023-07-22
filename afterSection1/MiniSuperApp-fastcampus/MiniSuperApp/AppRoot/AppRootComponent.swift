@@ -13,12 +13,15 @@ import FinanceRepository
 import ModernRIBs
 import TransportHome
 import TransportHomeImp
+import Topup
+import TopupImp
 
 final class AppRootComponent: Component<AppRootDependency>,
                               AppHomeDependency,
                               FinanceHomeDependency,
                               ProfileHomeDependency,
-                              TransportHomeDependency {
+                              TransportHomeDependency,
+                              TopupDependency {
   
   var cardOnFileRepository: CardOnFileRepository
   var superPayRepository: SuperPayRepository
@@ -27,13 +30,24 @@ final class AppRootComponent: Component<AppRootDependency>,
     return TransportHomeBuilder(dependency: self)
   }()
   
+  
+  lazy var topupBuildable: TopupBuildable = {
+    return TopupBuilder(dependency: self)
+  }()
+  
+  var topupBaseViewController: ViewControllable { rootViewController.topViewControllable }
+  
+  private let rootViewController: ViewControllable
+  
   init(
     dependency: AppRootDependency,
     cardOnFileRepository: CardOnFileRepository,
-    superPayRepository: SuperPayRepository
+    superPayRepository: SuperPayRepository,
+    rootViewController: ViewControllable
   ) {
     self.cardOnFileRepository = cardOnFileRepository
     self.superPayRepository = superPayRepository
+    self.rootViewController = rootViewController
     super.init(dependency: dependency)
   }
 }

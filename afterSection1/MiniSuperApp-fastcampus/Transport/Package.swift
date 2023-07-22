@@ -21,7 +21,8 @@ let package = Package(
       url: "https://github.com/DevYeom/ModernRIBs",
       from: "1.0.2"
     ),
-    .package(path: "../Finance")
+    .package(path: "../Finance"),
+    .package(path: "../Platform")
   ],
   targets: [
     .target(
@@ -36,7 +37,8 @@ let package = Package(
         "ModernRIBs",
         "TransportHome",
         .product(name: "FinanceRepository", package: "Finance"),
-        .product(name: "Topup", package: "Finance")
+        .product(name: "Topup", package: "Finance"),
+        .product(name: "SuperUI", package: "Platform")
       ],
       resources: [
         .process("Resources")
