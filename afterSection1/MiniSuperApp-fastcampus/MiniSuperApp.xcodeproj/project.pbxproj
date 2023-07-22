@@ -16,6 +16,8 @@
 		ED3F44212A62D54600D4EDF3 /* Topup in Frameworks */ = {isa = PBXBuildFile; productRef = ED3F44202A62D54600D4EDF3 /* Topup */; };
 		ED50D3562A63EAF600F0A785 /* ProfileHome in Frameworks */ = {isa = PBXBuildFile; productRef = ED50D3552A63EAF600F0A785 /* ProfileHome */; };
 		ED5D2E652A63195E00E066AD /* AppHome in Frameworks */ = {isa = PBXBuildFile; productRef = ED5D2E642A63195E00E066AD /* AppHome */; };
+		ED6C1FBF2A6BC25200564536 /* AppRootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C1FBE2A6BC25200564536 /* AppRootComponent.swift */; };
+		ED6C1FC12A6BC2E300564536 /* TransportHomeImp in Frameworks */ = {isa = PBXBuildFile; productRef = ED6C1FC02A6BC2E300564536 /* TransportHomeImp */; };
 		ED82107C2A6314350083602F /* FinanceHome in Frameworks */ = {isa = PBXBuildFile; productRef = ED82107B2A6314350083602F /* FinanceHome */; };
 		ED86AB132A6315EE0003E0B8 /* TransportHome in Frameworks */ = {isa = PBXBuildFile; productRef = ED86AB122A6315EE0003E0B8 /* TransportHome */; };
 		EDE564D42A4C98F700DEE204 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = EDE564D32A4C98F700DEE204 /* CombineExt */; };
@@ -36,6 +38,7 @@
 		ED31C8492A62B62D005BEB68 /* Finance */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Finance; sourceTree = "<group>"; };
 		ED31C84A2A62B650005BEB68 /* Transport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transport; sourceTree = "<group>"; };
 		ED31C84C2A62B681005BEB68 /* CX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CX; sourceTree = "<group>"; };
+		ED6C1FBE2A6BC25200564536 /* AppRootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootComponent.swift; sourceTree = "<group>"; };
 		EDFA5EA52A4AE85400747D27 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F57F6AFD26DB4CD700C0117D /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		F5829F5526DB2BC400BFA8CD /* MiniSuperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniSuperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +61,7 @@
 				ED2B4BD62A62BA4500737BB7 /* AddPaymentMethod in Frameworks */,
 				ED3F44192A62CFB800D4EDF3 /* CombineUtil in Frameworks */,
 				ED50D3562A63EAF600F0A785 /* ProfileHome in Frameworks */,
+				ED6C1FC12A6BC2E300564536 /* TransportHomeImp in Frameworks */,
 				ED3F44212A62D54600D4EDF3 /* Topup in Frameworks */,
 				ED3F44152A62CFB800D4EDF3 /* FinanceEntity in Frameworks */,
 				ED3F441D2A62CFB800D4EDF3 /* SuperUI in Frameworks */,
@@ -123,6 +127,7 @@
 			children = (
 				F5829F7026DB34AA00BFA8CD /* AppRootRouter.swift */,
 				F5829F7226DB34AA00BFA8CD /* AppRootBuilder.swift */,
+				ED6C1FBE2A6BC25200564536 /* AppRootComponent.swift */,
 				F5829F7326DB34AA00BFA8CD /* AppRootInteractor.swift */,
 				F57F6AFD26DB4CD700C0117D /* RootTabBarController.swift */,
 			);
@@ -168,6 +173,7 @@
 				ED86AB122A6315EE0003E0B8 /* TransportHome */,
 				ED5D2E642A63195E00E066AD /* AppHome */,
 				ED50D3552A63EAF600F0A785 /* ProfileHome */,
+				ED6C1FC02A6BC2E300564536 /* TransportHomeImp */,
 			);
 			productName = SuperRedApp;
 			productReference = F5829F5526DB2BC400BFA8CD /* MiniSuperApp.app */;
@@ -231,6 +237,7 @@
 				F57F6AFE26DB4CD700C0117D /* RootTabBarController.swift in Sources */,
 				F5829F5926DB2BC400BFA8CD /* AppDelegate.swift in Sources */,
 				F5829F7926DB397300BFA8CD /* AppComponent.swift in Sources */,
+				ED6C1FBF2A6BC25200564536 /* AppRootComponent.swift in Sources */,
 				F5829F7426DB34AA00BFA8CD /* AppRootRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +486,10 @@
 		ED5D2E642A63195E00E066AD /* AppHome */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppHome;
+		};
+		ED6C1FC02A6BC2E300564536 /* TransportHomeImp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TransportHomeImp;
 		};
 		ED82107B2A6314350083602F /* FinanceHome */ = {
 			isa = XCSwiftPackageProductDependency;
