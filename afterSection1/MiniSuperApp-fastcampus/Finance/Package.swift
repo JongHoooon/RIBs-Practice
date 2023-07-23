@@ -36,6 +36,10 @@ let package = Package(
       name: "FinanceRepository",
       targets: ["FinanceRepository"]
     ),
+    .library(
+      name: "FinanceRepositoryTestSupport",
+      targets: ["FinanceRepositoryTestSupport"]
+    )
   ],
   dependencies: [
     .package(
@@ -109,5 +113,20 @@ let package = Package(
         .product(name: "Network", package: "Platform")
       ]
     ),
+    .target(
+      name: "FinanceRepositoryTestSupport",
+      dependencies: [
+        "FinanceEntity",
+        "FinanceRepository",
+        .product(name: "CombineUtil", package: "Platform")
+      ]
+    ),
+    .testTarget(
+      name: "TopupImpTests",
+      dependencies: [
+        "TopupImp",
+        "FinanceRepositoryTestSupport"
+      ]
+    )
   ]
 )
