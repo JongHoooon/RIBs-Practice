@@ -40,13 +40,18 @@ let package = Package(
     .package(
       url: "https://github.com/DevYeom/ModernRIBs",
       from: "1.0.2"
+    ),
+    .package(
+      url: "https://github.com/pointfreeco/combine-schedulers",
+      from: "0.11.0"
     )
   ],
   targets: [
     .target(
       name: "CombineUtil",
       dependencies: [
-        "CombineExt"
+        "CombineExt",
+        .product(name: "CombineSchedulers", package: "combine-schedulers")
       ]
     ),
     .target(

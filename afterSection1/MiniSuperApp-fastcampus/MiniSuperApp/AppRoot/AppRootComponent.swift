@@ -19,6 +19,7 @@ import AddPaymentMethod
 import AddPaymentMethodImp
 import Network
 import NetworkImp
+import CombineSchedulers
 
 final class AppRootComponent: Component<AppRootDependency>,
                               AppHomeDependency,
@@ -28,8 +29,10 @@ final class AppRootComponent: Component<AppRootDependency>,
                               TopupDependency,
                               AddPaymentMethodDependency {
   
+  
   var cardOnFileRepository: CardOnFileRepository
   var superPayRepository: SuperPayRepository
+  var mainQueue: CombineSchedulers.AnySchedulerOf<DispatchQueue> { .main }
   
   lazy var transportHomeBuildable: TransportHomeBuildable = {
     return TransportHomeBuilder(dependency: self)

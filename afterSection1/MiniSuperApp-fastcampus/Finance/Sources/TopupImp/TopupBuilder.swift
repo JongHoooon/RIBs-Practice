@@ -5,12 +5,14 @@
 //  Created by JongHoon on 2023/07/05.
 //
 
+import Foundation
 import ModernRIBs
 import FinanceRepository
 import AddPaymentMethod
 import CombineUtil
 import FinanceEntity
 import Topup
+import CombineSchedulers
 
 public protocol TopupDependency: Dependency {
   
@@ -19,6 +21,7 @@ public protocol TopupDependency: Dependency {
   var cardOnFileRepository: CardOnFileRepository { get }
   var superPayRepository: SuperPayRepository { get }
   var addPaymentMethodBuildable: AddPaymentMethodBuildable { get }
+  var mainQueue: AnySchedulerOf<DispatchQueue> { get }
 }
 
 final class TopupComponent: Component<TopupDependency>,
@@ -36,6 +39,8 @@ final class TopupComponent: Component<TopupDependency>,
   var addPaymentMethodBuildable: AddPaymentMethodBuildable {
     dependency.addPaymentMethodBuildable
   }
+  
+  var mainQueue: AnySchedulerOf<DispatchQueue> { dependency.mainQueue }
   
   init(
     dependency: TopupDependency,
